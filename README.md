@@ -1,5 +1,7 @@
 # ESP8266-Sample
-Sample ESP8266 arduino code to use with DIoTY.co
+Sample ESP8266 arduino code to use with DIoTY.co cloud MQTT service.
+
+Note that you need PubSubClient library from @Knolleary.  You can find it here: https://github.com/knolleary/pubsubclient
 
 Make sure you update the values specified below with your id's and passwords:
 
