@@ -72,11 +72,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
   // The mobile app will publish 'true' or 'false' to the topic
   // Switch on the LED if an 't' was received as first character, otherwise switch it off
   if ((char)payload[0] == 't') {
-    Serial.println("payload[0] = 't': " + HIGH);
-    digitalWrite(GPIO0, HIGH);   // Turn the LED on 
+    Serial.println("payload[0] = 't': " + LOW);
+    digitalWrite(GPIO0, LOW);   // Turn the LED on 
   } else {
-    digitalWrite(GPIO0, LOW);  // Turn the LED off
-    Serial.println("payload[0] <> 't': " + LOW);
+    digitalWrite(GPIO0, HIGH);  // Turn the LED off
+    Serial.println("payload[0] <> 't': " + HIGH);
   }
 
 }
