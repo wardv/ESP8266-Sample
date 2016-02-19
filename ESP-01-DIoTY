@@ -73,7 +73,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
   // Switch on the LED if an 't' was received as first character, otherwise switch it off
   if ((char)payload[0] == 't') {
     Serial.println("payload[0] = 't': " + LOW);
-    digitalWrite(GPIO0, LOW);   // Turn the LED on 
+    digitalWrite(GPIO0, LOW);   // Turn the LED on (Note that LOW is the voltage level
+    // but actually the LED is on; this is because it is active low on the ESP-01)
   } else {
     digitalWrite(GPIO0, HIGH);  // Turn the LED off
     Serial.println("payload[0] <> 't': " + HIGH);
